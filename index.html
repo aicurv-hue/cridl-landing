@@ -13,13 +13,18 @@
   <meta name="twitter:title" content="Cridl — Your LinkedIn, on autopilot." />
   <meta name="twitter:description" content="AI-powered LinkedIn automation that sounds like you." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232D5BFF'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='18' fill='white'>c</text></svg>" />
-  <!-- Google Analytics 4 — replace G-XEB5CHNTJW with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEB5CHNTJW"></script>
+  <!-- Google Analytics 4 — deferred to avoid render-blocking -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XEB5CHNTJW');
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XEB5CHNTJW';
+      document.head.appendChild(s);
+    });
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1891,7 +1896,7 @@
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 8);
-    });
+    }, { passive: true });
 
     // Scroll animations with IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
