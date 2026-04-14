@@ -20,16 +20,16 @@
     gtag('js', new Date());
     gtag('config', 'G-XEB5CHNTJW');
     function loadGtag() {
+      if (window._gtagLoaded) return;
+      window._gtagLoaded = true;
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XEB5CHNTJW';
       document.head.appendChild(s);
     }
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadGtag, { timeout: 4000 });
-    } else {
-      window.addEventListener('load', function() { setTimeout(loadGtag, 3000); });
-    }
+    ['mousedown','touchstart','keydown','scroll','mousemove'].forEach(function(e) {
+      window.addEventListener(e, loadGtag, { once: true, passive: true });
+    });
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
