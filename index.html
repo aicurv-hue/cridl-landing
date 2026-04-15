@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cridl — Your LinkedIn, on autopilot.</title>
-  <meta name="description" content="Cridl creates AI-powered LinkedIn posts in your voice, generates matching images, and schedules months of content — so you stay consistent without the grind." />
-  <meta property="og:title" content="Cridl — Your LinkedIn, on autopilot." />
-  <meta property="og:description" content="AI-powered LinkedIn automation that sounds like you. Create, schedule, and stay consistent — effortlessly." />
+  <title>Cridl — AI-assisted LinkedIn content for professionals</title>
+  <meta name="description" content="Cridl helps professionals, teams, and agencies plan, generate, and publish LinkedIn content in their brand voice — with full control at every step." />
+  <meta property="og:title" content="Cridl — AI-assisted LinkedIn content for professionals" />
+  <meta property="og:description" content="Plan, generate, and publish LinkedIn content in your brand voice. AI-assisted drafts, Style Memory, and a full content workflow — with you in control." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cridl.com" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cridl — Your LinkedIn, on autopilot." />
-  <meta name="twitter:description" content="AI-powered LinkedIn automation that sounds like you." />
+  <meta name="twitter:title" content="Cridl — AI-assisted LinkedIn content for professionals" />
+  <meta name="twitter:description" content="Plan, generate, and publish LinkedIn content in your brand voice. You review and approve every post." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232D5BFF'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='18' fill='white'>c</text></svg>" />
   <!-- Google Analytics 4 — deferred to avoid render-blocking -->
   <script>
@@ -1278,6 +1278,206 @@
       section { padding: 72px 16px; }
       .pricing-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── ICP SEGMENTS ── */
+    #segments { background: #fff; }
+    #segments .features-header { margin-bottom: 48px; }
+
+    .segments-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .segment-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .segment-card:hover {
+      border-color: rgba(45, 91, 255, 0.25);
+      box-shadow: 0 4px 24px rgba(45, 91, 255, 0.06);
+    }
+
+    .segment-icon {
+      font-size: 1.75rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .segment-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .segment-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .segment-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .segment-bullets li {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .segment-bullets li::before {
+      content: '→';
+      color: var(--accent);
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .segments-grid { grid-template-columns: 1fr; gap: 16px; }
+    }
+
+    /* ── WHY CRIDL ── */
+    #why-cridl { background: var(--bg); text-align: center; }
+    #why-cridl .features-header { margin-bottom: 48px; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .why-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      text-align: left;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+
+    .why-item:hover { border-color: rgba(45, 91, 255, 0.25); }
+
+    .why-item:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .why-check {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(45, 91, 255, 0.1);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .why-item h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .why-item p {
+      font-size: 0.855rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .why-item:last-child:nth-child(odd) { grid-column: auto; max-width: 100%; }
+    }
+
+    /* ── COMPLIANCE / TRUST ── */
+    #compliance {
+      background: #f5f5f3;
+      text-align: center;
+    }
+
+    #compliance .features-header { margin-bottom: 48px; }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .trust-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: left;
+    }
+
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      background: rgba(45, 91, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+
+    .trust-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .trust-card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .compliance-note {
+      margin-top: 40px;
+      font-size: 0.825rem;
+      color: var(--text-subtle);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .trust-grid { grid-template-columns: 1fr; gap: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -1288,6 +1488,7 @@
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#how">How it works</a></li>
+      <li><a href="#compliance">Trust &amp; Compliance</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
     <div class="nav-cta">
@@ -1298,8 +1499,8 @@
   <!-- HERO -->
   <section id="hero">
     <div class="badge fade-up">🚀 Now in Early Access</div>
-    <h1 class="hero-headline fade-up fade-up-delay-1">Your LinkedIn,<br /><em>on autopilot.</em></h1>
-    <p class="hero-sub fade-up fade-up-delay-2">Cridl creates AI-powered posts in your voice, generates matching images, and schedules months of content — so you stay consistent without the grind.</p>
+    <h1 class="hero-headline fade-up fade-up-delay-1">AI-assisted LinkedIn content<br /><em>that sounds like you.</em></h1>
+    <p class="hero-sub fade-up fade-up-delay-2">Cridl helps professionals, teams, and agencies plan, generate, and publish LinkedIn content in their brand voice — with full editorial control at every step.</p>
     <div class="hero-ctas fade-up fade-up-delay-3">
       <a href="#cta" class="btn btn-primary btn-lg">Get Early Access</a>
       <a href="#how" class="btn btn-outline btn-lg">See how it works</a>
@@ -1310,13 +1511,13 @@
       <div class="mock-card">
         <div class="mock-tag">
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="5" fill="#2D5BFF"/></svg>
-          AI-generated · Style matched to your last 8 posts
+          AI-drafted · Style-matched to your voice · Awaiting your review
         </div>
         <div class="mock-header">
           <div class="mock-avatar">JD</div>
           <div>
             <div class="mock-name">James Donovan</div>
-            <div class="mock-meta">Product Lead @ Notion · Just now</div>
+            <div class="mock-meta">Product Lead @ Notion · Draft ready for review</div>
           </div>
         </div>
         <div class="mock-body">
@@ -1345,11 +1546,11 @@
       </div>
       <div class="mock-floating top-right">
         <div class="float-dot"></div>
-        Scheduled for Mon 9:00 AM
+        Approved &amp; scheduled · Mon 9:00 AM
       </div>
       <div class="mock-floating bottom-left">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D5BFF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        87 more posts queued
+        3 months of content planned
       </div>
     </div>
   </section>
@@ -1380,34 +1581,79 @@
     </div>
   </section>
 
+  <!-- ICP SEGMENTS -->
+  <section id="segments">
+    <div class="container">
+      <div class="features-header">
+        <p class="section-label fade-up">Who it's for</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">Built for people who take<br />LinkedIn seriously</h2>
+        <p class="section-sub fade-up fade-up-delay-2">Whether you're building a personal brand, managing clients, or keeping a sales team visible — Cridl is designed around your workflow.</p>
+      </div>
+
+      <div class="segments-grid">
+        <div class="segment-card fade-up">
+          <span class="segment-icon">🎯</span>
+          <h3>Founders &amp; Professionals</h3>
+          <p>Build your personal brand without sacrificing hours every week. Cridl learns your voice and keeps you consistently visible — even when you're heads-down building.</p>
+          <ul class="segment-bullets">
+            <li>Style Memory trained on your own posts</li>
+            <li>Draft in minutes, publish when ready</li>
+            <li>Content calendar to plan months ahead</li>
+          </ul>
+        </div>
+        <div class="segment-card fade-up fade-up-delay-1">
+          <span class="segment-icon">🏢</span>
+          <h3>Agencies &amp; Consultants</h3>
+          <p>Manage LinkedIn content for multiple clients from a single dashboard. Separate brand voices, separate calendars — one efficient workflow.</p>
+          <ul class="segment-bullets">
+            <li>Multi-account management in one place</li>
+            <li>Separate Style Memory per client profile</li>
+            <li>Bulk scheduling across accounts</li>
+          </ul>
+        </div>
+        <div class="segment-card fade-up fade-up-delay-2">
+          <span class="segment-icon">📊</span>
+          <h3>B2B Sales &amp; Marketing Teams</h3>
+          <p>Keep your team consistently visible on LinkedIn with on-brand content at scale. Coordinate personal profiles and company pages from one team workspace.</p>
+          <ul class="segment-bullets">
+            <li>Personal profiles + company page support</li>
+            <li>Campaign builder for product launches</li>
+            <li>Team collaboration and approval workflow</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURES -->
   <section id="features">
     <div class="container">
       <div class="features-header">
         <p class="section-label fade-up">Features</p>
-        <h2 class="section-headline fade-up fade-up-delay-1">Everything you need<br />to own LinkedIn</h2>
+        <h2 class="section-headline fade-up fade-up-delay-1">A complete content system,<br />not just an AI writing box</h2>
+        <p class="section-sub fade-up fade-up-delay-2">Every feature is built around a professional workflow — from strategy to draft to publish.</p>
       </div>
 
       <div class="feature-grid">
         <div class="feature-card fade-up">
           <div class="feature-icon fi-blue">🧠</div>
-          <h3>Researches before it writes</h3>
-          <p>Neel — Cridl's AI ghostwriter — researches your topic first, pulling real insights and data before writing a single word. Every post is backed by substance, not generic filler.</p>
+          <h3>Style Memory &amp; Brand Voice Training</h3>
+          <p>Cridl analyzes your last 5–10 posts to learn your sentence structure, vocabulary, and tone. Every AI-drafted post reflects your brand voice — not a generic template. Your voice is the foundation.</p>
         </div>
         <div class="feature-card fade-up fade-up-delay-1">
-          <div class="feature-icon fi-green">🖼️</div>
-          <h3>AI images + Use My Face</h3>
-          <p>No stock photos. Cridl generates branded images that match your post — including face-consistent AI images featuring your actual likeness, on Pro and above.</p>
+          <div class="feature-icon fi-green">📅</div>
+          <h3>Content Calendar &amp; Bulk Scheduling</h3>
+          <p>Plan weeks or months of content in one session with a visual calendar and timezone support. Schedule up to 500 posts at once — review them all before anything goes live.</p>
         </div>
         <div class="feature-card fade-up fade-up-delay-2">
-          <div class="feature-icon fi-orange">📅</div>
-          <h3>Bulk schedule 500 posts</h3>
-          <p>Plan 2–3 months of LinkedIn content in one session. Set it, review it, forget it. Cridl handles publishing on time, every time — no babysitting required.</p>
+          <div class="feature-icon fi-orange">🖼️</div>
+          <h3>AI-Generated Images &amp; "Use My Face"</h3>
+          <p>Every post gets a branded, AI-generated image — no stock photos needed. On Creator plan and above, generate face-consistent images featuring your actual likeness for a truly personal presence.</p>
         </div>
         <div class="feature-card fade-up fade-up-delay-3">
-          <div class="feature-icon fi-purple">🏢</div>
-          <h3>Personal + company pages</h3>
-          <p>Manage your personal profile and company page from one dashboard — separate voices, separate memory, same effortless workflow. Built for founders and marketing teams.</p>
+          <div class="feature-icon fi-purple">👥</div>
+          <h3>Multi-Account &amp; Team Management</h3>
+          <p>Manage personal profiles and company pages from one dashboard — each with its own brand voice and content calendar. Built for agencies managing multiple clients and teams coordinating at scale.</p>
         </div>
       </div>
     </div>
@@ -1418,25 +1664,25 @@
     <div class="container">
       <div class="features-header">
         <p class="section-label fade-up">How it works</p>
-        <h2 class="section-headline fade-up fade-up-delay-1">Three steps. Months of content.</h2>
-        <p class="section-sub fade-up fade-up-delay-2">From setup to a fully-loaded content calendar in one sitting.</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">A professional workflow,<br />not a black box.</h2>
+        <p class="section-sub fade-up fade-up-delay-2">You set the strategy. Cridl handles the drafts. You approve everything before it moves forward.</p>
       </div>
 
       <div class="steps-grid">
         <div class="step fade-up">
           <div class="step-num">1</div>
-          <h3>Tell Cridl your topics</h3>
-          <p>Drop in your areas of expertise, industry, and content goals. Cridl learns what you want to talk about and who you're talking to.</p>
+          <h3>Plan your content strategy</h3>
+          <p>Define your topics, audience, tone, and brand guidelines. You set the direction — Cridl follows your lead. Nothing happens without your input first.</p>
         </div>
         <div class="step fade-up fade-up-delay-1">
           <div class="step-num">2</div>
-          <h3>Review AI-generated posts</h3>
-          <p>Cridl writes posts in your voice with matching images. Edit anything you want, approve what you love — full control, zero grind.</p>
+          <h3>Generate AI-assisted drafts</h3>
+          <p>Cridl writes posts using Style Memory — matched to your voice, vocabulary, and structure. Every draft lands in your review queue, not your LinkedIn feed.</p>
         </div>
         <div class="step fade-up fade-up-delay-2">
           <div class="step-num">3</div>
-          <h3>Schedule and relax</h3>
-          <p>Bulk schedule up to 500 posts across weeks or months. Cridl publishes on time, every time. Come back next quarter.</p>
+          <h3>You review, approve, and publish</h3>
+          <p>Edit anything. Approve only what's ready. Schedule on your timeline with the content calendar. Nothing goes live without your explicit sign-off.</p>
         </div>
       </div>
     </div>
@@ -1494,10 +1740,59 @@
               <td class="col-label">Consistency</td>
               <td class="col-diy">Hard to maintain</td>
               <td class="col-ghost">Agency-dependent</td>
-              <td class="col-cridl">Effortless, autopilot</td>
+              <td class="col-cridl">Consistent, calendar-driven</td>
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CRIDL -->
+  <section id="why-cridl">
+    <div class="container">
+      <div class="features-header">
+        <p class="section-label fade-up">Why Cridl</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">Not another AI writing tool.<br />A complete content workflow.</h2>
+        <p class="section-sub fade-up fade-up-delay-2">Generic AI tools give you a text box. Basic schedulers just queue posts. Cridl connects strategy, generation, review, and publishing into one professional system.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item fade-up">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>Built around your workflow, not a prompt box</h4>
+            <p>From content strategy to calendar to analytics — every step is connected. Cridl works the way professional content teams do.</p>
+          </div>
+        </div>
+        <div class="why-item fade-up fade-up-delay-1">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>Style Memory makes every post unmistakably yours</h4>
+            <p>Cridl trains on your actual writing — not a generic persona. Every AI-assisted draft reflects your vocabulary, cadence, and perspective.</p>
+          </div>
+        </div>
+        <div class="why-item fade-up fade-up-delay-2">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>Designed for teams, not just individuals</h4>
+            <p>Separate brand voices per profile, shared content calendars, and multi-account support — built for agencies and teams managing LinkedIn at scale.</p>
+          </div>
+        </div>
+        <div class="why-item fade-up fade-up-delay-3">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>You stay in full editorial control</h4>
+            <p>Every post goes through your review queue. Edit, reject, or approve — nothing publishes without your explicit action. You're always the author.</p>
+          </div>
+        </div>
+        <div class="why-item fade-up fade-up-delay-4">
+          <div class="why-check">✓</div>
+          <div>
+            <h4>End-to-end: from strategy to publishing to analytics</h4>
+            <p>Content calendar, campaign builder, bulk scheduling, impression analytics, and best-time insights — all in one place, not spread across five tools.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1509,7 +1804,7 @@
         <!-- Left: copy -->
         <div>
           <p class="section-label fade-up">Real Results</p>
-          <h2 class="section-headline fade-up fade-up-delay-1">Your LinkedIn,<br />growing while you sleep.</h2>
+          <h2 class="section-headline fade-up fade-up-delay-1">Consistent presence.<br />Measurable results.</h2>
           <p class="section-sub fade-up fade-up-delay-2">Cridl users see dramatic spikes in impressions within weeks — not because they posted more, but because they finally posted <em>consistently.</em></p>
 
           <div class="results-stats">
@@ -1606,17 +1901,17 @@
   <!-- VOICE / PHILOSOPHY -->
   <section id="voice">
     <div class="voice-inner">
-      <h2 class="section-headline fade-up">Your voice is the moat.</h2>
+      <h2 class="section-headline fade-up">Your voice is the differentiator.</h2>
       <div class="voice-body">
         <p class="fade-up fade-up-delay-1">No one can compete with you being you.</p>
         <p class="fade-up fade-up-delay-1">No one has your stories. No one has lived your exact path. No one has your specific mix of wins, failures, and hard-earned perspective.</p>
-        <p class="voice-bold fade-up fade-up-delay-2">In a feed full of AI slop, your authentic voice is an unfair advantage.</p>
-        <p class="fade-up fade-up-delay-2">Most people don't get this. They try to sound like everyone else. They blend in. They disappear.</p>
-        <p class="fade-up fade-up-delay-3">You already have everything you need: the knowledge, the expertise, the stories.</p>
-        <p class="fade-up fade-up-delay-3">What you don't have is time to package it all.</p>
-        <p class="voice-bold fade-up fade-up-delay-4">Cridl helps you sound like you — organized, consistent, and impossible to ignore.</p>
+        <p class="voice-bold fade-up fade-up-delay-2">In a feed full of generic content, your authentic voice is a professional advantage.</p>
+        <p class="fade-up fade-up-delay-2">Most professionals know they should be more active on LinkedIn. The barrier isn't motivation — it's time and process.</p>
+        <p class="fade-up fade-up-delay-3">You already have everything you need: the knowledge, the expertise, the perspective.</p>
+        <p class="fade-up fade-up-delay-3">What you need is a system to turn it into consistent, high-quality content.</p>
+        <p class="voice-bold fade-up fade-up-delay-4">Cridl gives you that system — so every post sounds like you at your best.</p>
       </div>
-      <a href="#cta" class="btn btn-primary btn-lg btn-pill fade-up fade-up-delay-4">Start sounding like you →</a>
+      <a href="#cta" class="btn btn-primary btn-lg btn-pill fade-up fade-up-delay-4">Get Early Access →</a>
     </div>
   </section>
 
@@ -1735,6 +2030,37 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE / TRUST -->
+  <section id="compliance">
+    <div class="container">
+      <div class="features-header">
+        <p class="section-label fade-up">Built responsibly</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">Enterprise-ready.<br />LinkedIn-compliant.</h2>
+        <p class="section-sub fade-up fade-up-delay-2">Cridl is built to work with LinkedIn's policies — not around them. Every technical and editorial decision reflects that.</p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card fade-up">
+          <div class="trust-icon">✋</div>
+          <h3>User-controlled publishing</h3>
+          <p>Every post requires your explicit review and approval before it's scheduled. There is no fully automated posting — you are always the final decision-maker before anything goes live on LinkedIn.</p>
+        </div>
+        <div class="trust-card fade-up fade-up-delay-1">
+          <div class="trust-icon">🔐</div>
+          <h3>Official LinkedIn OAuth integration</h3>
+          <p>Cridl connects to LinkedIn through the official OAuth flow — the same secure standard LinkedIn uses for all third-party apps. No password storage. No scraping. No unauthorized data access.</p>
+        </div>
+        <div class="trust-card fade-up fade-up-delay-2">
+          <div class="trust-icon">🛡️</div>
+          <h3>Your data stays private</h3>
+          <p>Your writing samples, post history, and account data are stored securely and never shared with other users or used to train public AI models. Your voice is exclusively yours.</p>
+        </div>
+      </div>
+
+      <p class="compliance-note fade-up">Cridl uses LinkedIn's official APIs and operates in full compliance with LinkedIn's User Agreement and API Terms of Service. We do not engage in scraping, unauthorized data collection, or any activity that violates platform policies.</p>
     </div>
   </section>
 
