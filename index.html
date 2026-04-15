@@ -1917,6 +1917,149 @@
       .system-grid { grid-template-columns: 1fr; }
     }
 
+    /* ── CONNECT ONCE FLOW ── */
+    #connect-flow { background: var(--dark-bg); padding: 96px 24px; }
+
+    .connect-flow-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    #connect-flow .section-label { color: rgba(255,255,255,0.4); }
+    #connect-flow .section-headline { color: #fff; margin-bottom: 12px; }
+    #connect-flow .section-sub { color: rgba(255,255,255,0.55); margin-bottom: 64px; max-width: 580px; }
+
+    .connect-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .connect-steps::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: calc(12.5% + 16px);
+      right: calc(12.5% + 16px);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(45,91,255,0.6) 0%, rgba(45,91,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+    }
+
+    .connect-step {
+      padding: 0 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .connect-step-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .csi-blue { background: var(--accent); }
+    .csi-indigo { background: rgba(99,102,241,0.9); }
+    .csi-green { background: rgba(34,197,94,0.9); }
+    .csi-white { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); }
+
+    .connect-step h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.925rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .connect-step p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+
+    .connect-step-time {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #22c55e;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.2);
+      border-radius: 100px;
+      padding: 2px 10px;
+    }
+
+    /* LinkedIn data extraction card */
+    .li-extract-card {
+      margin-top: 56px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+
+    .li-extract-col h4 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 12px;
+    }
+
+    .li-extract-items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .li-extract-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .li-extract-item::before {
+      content: '→';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 0.75rem;
+    }
+
+    .li-extract-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #22c55e;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .connect-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .connect-steps::before { display: none; }
+      .li-extract-card { grid-template-columns: 1fr; gap: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .connect-steps { grid-template-columns: 1fr; }
+    }
+
     /* ── 5-STEP TIMELINE ── */
     .steps-timeline {
       max-width: 680px;
@@ -2013,7 +2156,7 @@
   <section id="hero">
     <div class="badge fade-up">✦ Personal Brand Operating System</div>
     <h1 class="hero-headline fade-up fade-up-delay-1">Stop creating content.<br /><em>Start operating your brand.</em></h1>
-    <p class="hero-sub fade-up fade-up-delay-2">Cridl is the AI system that learns your writing style, plans your content strategy, and generates LinkedIn posts that sound unmistakably like you — with full editorial control before anything publishes.</p>
+    <p class="hero-sub fade-up fade-up-delay-2">Connect your LinkedIn once. Cridl reads your profile, experience, and past posts — then builds your complete brand voice model automatically. No manual setup. First draft ready in seconds.</p>
     <div class="hero-ctas fade-up fade-up-delay-3">
       <a href="#cta" class="btn btn-primary btn-lg">Get Early Access</a>
       <a href="#how" class="btn btn-outline btn-lg">See how it works</a>
@@ -2024,7 +2167,7 @@
       <div class="mock-card">
         <div class="mock-tag">
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="5" fill="#2D5BFF"/></svg>
-          AI-drafted · Style-matched to your voice · Awaiting your review
+          Voice trained from LinkedIn · Brand profile auto-built · Awaiting your review
         </div>
         <div class="mock-header">
           <div class="mock-avatar">JD</div>
@@ -2064,6 +2207,84 @@
       <div class="mock-floating bottom-left">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D5BFF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         3 months of content planned
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT ONCE FLOW -->
+  <section id="connect-flow">
+    <div class="connect-flow-inner">
+      <p class="section-label fade-up">How onboarding works</p>
+      <h2 class="section-headline fade-up fade-up-delay-1">Connect LinkedIn once.<br />Understood instantly.</h2>
+      <p class="section-sub fade-up fade-up-delay-2">No questionnaires. No manual training. Cridl reads your LinkedIn profile and posts through the official API — and builds your complete brand profile in seconds.</p>
+
+      <div class="connect-steps">
+        <div class="connect-step fade-up">
+          <div class="connect-step-icon csi-blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <h3>Connect LinkedIn</h3>
+          <p>One-click OAuth connection. Cridl accesses your profile data through LinkedIn's official API — securely and with your permission.</p>
+          <span class="connect-step-time">~30 seconds</span>
+        </div>
+        <div class="connect-step fade-up fade-up-delay-1">
+          <div class="connect-step-icon csi-indigo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Auto-Profile Generated</h3>
+          <p>Cridl extracts your headline, experience, expertise signals, and writing style from your recent posts — no manual input needed.</p>
+          <span class="connect-step-time">~10 seconds</span>
+        </div>
+        <div class="connect-step fade-up fade-up-delay-2">
+          <div class="connect-step-icon csi-green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Review Your Brand Profile</h3>
+          <p>See exactly what Cridl learned — your ICP, niche, tone, expertise areas, and voice model. Edit anything before going live.</p>
+          <span class="connect-step-time">Optional refinement</span>
+        </div>
+        <div class="connect-step fade-up fade-up-delay-3">
+          <div class="connect-step-icon csi-white">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </div>
+          <h3>First Draft Ready</h3>
+          <p>Cridl generates your first post immediately — calibrated to your voice, your niche, and your audience. Review it, then publish.</p>
+          <span class="connect-step-time">Instant</span>
+        </div>
+      </div>
+
+      <div class="li-extract-card fade-up">
+        <div class="li-extract-col">
+          <h4>From your LinkedIn profile</h4>
+          <div class="li-extract-items">
+            <div class="li-extract-item">Headline → Niche &amp; positioning</div>
+            <div class="li-extract-item">About section → Brand voice &amp; tone</div>
+            <div class="li-extract-item">Experience → Expertise signals</div>
+            <div class="li-extract-item">Industry → Content context</div>
+          </div>
+        </div>
+        <div class="li-extract-col">
+          <h4>From your recent posts</h4>
+          <div class="li-extract-items">
+            <div class="li-extract-item">Vocabulary &amp; sentence patterns</div>
+            <div class="li-extract-item">Tone — formal, conversational, direct</div>
+            <div class="li-extract-item">Preferred formats &amp; post length</div>
+            <div class="li-extract-item">Topics you consistently return to</div>
+          </div>
+        </div>
+        <div class="li-extract-col">
+          <h4>What Cridl builds for you</h4>
+          <div class="li-extract-items">
+            <div class="li-extract-item">Complete Style Memory™ model</div>
+            <div class="li-extract-item">Content strategy &amp; topic pillars</div>
+            <div class="li-extract-item">Smart post idea queue</div>
+            <div class="li-extract-item">Best time &amp; format recommendations</div>
+          </div>
+          <div class="li-extract-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            All via LinkedIn's official API. No scraping.
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -2195,12 +2416,12 @@
         <div class="system-cell">
           <div class="system-cell-num">01</div>
           <h3>Voice Layer — Style Memory™</h3>
-          <p>Cridl analyzes your existing LinkedIn posts and maps your vocabulary, tone, sentence patterns, and topic affinity. This becomes your permanent voice model — updated and refined after every post you publish.</p>
+          <p>When you connect LinkedIn, Cridl reads your profile and recent posts through the official API — extracting your vocabulary, tone, sentence patterns, and expertise signals automatically. Your voice model is built instantly, then refined with every post you approve.</p>
         </div>
         <div class="system-cell">
           <div class="system-cell-num">02</div>
-          <h3>Strategy Layer — Content Planning</h3>
-          <p>Define your content pillars, audience, posting cadence, and brand guidelines. Cridl holds your strategy so every generated draft is aligned with your goals — not just a random LinkedIn post.</p>
+          <h3>Strategy Layer — Auto Profile Builder</h3>
+          <p>Cridl derives your ICP, niche, content pillars, and positioning directly from your LinkedIn headline, experience, and bio — then surfaces it as an editable brand profile. Your strategy is extracted, not entered manually.</p>
         </div>
         <div class="system-cell">
           <div class="system-cell-num">03</div>
@@ -2227,24 +2448,24 @@
 
       <div class="feature-grid">
         <div class="feature-card fade-up">
-          <div class="feature-icon fi-blue">🧠</div>
-          <h3>Style Memory™ — your voice, permanently modeled</h3>
-          <p>Not a prompt. Not a persona toggle. Cridl reads your actual LinkedIn posts and builds a persistent model of how you think and write. It updates after every post — the longer you use it, the more accurate it becomes.</p>
+          <div class="feature-icon fi-blue">⚡</div>
+          <h3>Auto Profile Builder — zero setup required</h3>
+          <p>Connect LinkedIn and Cridl automatically extracts your ICP, niche, tone, and expertise from your headline, bio, and experience — through the official API. Your brand profile is generated in seconds, not filled in over an hour.</p>
         </div>
         <div class="feature-card fade-up fade-up-delay-1">
-          <div class="feature-icon fi-green">📅</div>
-          <h3>Content Calendar — months of presence, planned once</h3>
-          <p>Plan your entire content calendar in a single session. Visual scheduling with timezone support, bulk review, and one-click approval. You decide what goes when — Cridl makes sure it happens.</p>
+          <div class="feature-icon fi-green">🧠</div>
+          <h3>Instant Style Training — live from your posts</h3>
+          <p>Cridl reads your recent LinkedIn posts via the official API and trains your Style Memory™ model immediately. No samples to paste. No writing exercises. The system understands how you write before you draft the first post.</p>
         </div>
         <div class="feature-card fade-up fade-up-delay-2">
-          <div class="feature-icon fi-orange">🖼️</div>
-          <h3>AI Images + "Use My Face" — no stock photos, ever</h3>
-          <p>Every draft comes with a branded, AI-generated image matched to the content. On Creator and above: face-consistent images featuring your actual likeness — making every post recognizably yours.</p>
+          <div class="feature-icon fi-orange">💡</div>
+          <h3>Smart Content Suggestions — ideas from your profile</h3>
+          <p>Cridl generates a personalized post idea queue based on your industry, expertise, and what's performing in your niche. Every suggestion is pre-calibrated to your voice — not a generic list of topics.</p>
         </div>
         <div class="feature-card fade-up fade-up-delay-3">
-          <div class="feature-icon fi-purple">👥</div>
-          <h3>Multi-Account — one dashboard, many voices</h3>
-          <p>Manage personal profiles and company pages with separate Style Memory models for each. Built for agencies running multiple clients and teams that need coordinated LinkedIn presence at scale.</p>
+          <div class="feature-icon fi-purple">📅</div>
+          <h3>Full Workflow — calendar, images, multi-account</h3>
+          <p>Visual content calendar, bulk scheduling (up to 500 posts), AI-generated branded images, "Use My Face" AI images on Pro+, and multi-account management — personal profiles and company pages, all from one dashboard.</p>
         </div>
       </div>
     </div>
@@ -2255,29 +2476,29 @@
     <div class="sm-inner">
       <div>
         <p class="section-label fade-up">Core Technology</p>
-        <h2 class="section-headline fade-up fade-up-delay-1">Style Memory™ — the AI that learns to be you.</h2>
-        <p class="section-sub fade-up fade-up-delay-2">ChatGPT gives you a blank text box. Every other tool writes generic content. Cridl is different — it builds a model of your voice from your actual writing and improves every time you use it.</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">Style Memory™ — trained on you,<br />live from your LinkedIn data.</h2>
+        <p class="section-sub fade-up fade-up-delay-2">Every other tool asks you to describe your voice. Cridl reads it directly — from your actual posts, accessed through LinkedIn's official API — and builds a voice model that's accurate from day one.</p>
 
         <div class="sm-differentiators">
           <div class="sm-diff-item fade-up">
-            <div class="sm-diff-icon blue">🧠</div>
+            <div class="sm-diff-icon blue">⚡</div>
             <div>
-              <h4>Trained on your writing, not a template</h4>
-              <p>Cridl analyzes your last 5–10 LinkedIn posts — vocabulary, sentence length, tone, even the topics you gravitate toward. The output is calibrated to you, not to a generic "professional" persona.</p>
+              <h4>Instant — no training period, no onboarding friction</h4>
+              <p>The moment you connect LinkedIn, Cridl reads your recent posts via the official API and builds your voice model immediately. No samples to paste, no hours of setup. Your first draft sounds like you before you've written a single word.</p>
             </div>
           </div>
           <div class="sm-diff-item fade-up fade-up-delay-1">
             <div class="sm-diff-icon green">📈</div>
             <div>
-              <h4>Gets better the longer you use it</h4>
-              <p>Every post you approve, edit, or publish teaches Cridl more about your voice. The model compounds over time — month three sounds more like you than month one.</p>
+              <h4>Compounding — gets sharper with every post</h4>
+              <p>Every post you approve, edit, or publish teaches the model more about your voice. Patterns that appear once are noted. Patterns that appear consistently become part of your permanent style signature.</p>
             </div>
           </div>
           <div class="sm-diff-item fade-up fade-up-delay-2">
             <div class="sm-diff-icon orange">🔒</div>
             <div>
-              <h4>Your voice model is exclusively yours</h4>
-              <p>Your Style Memory is never shared, never used to train other users' models. It exists only to generate content for your account — a proprietary asset that grows with you.</p>
+              <h4>Exclusive — your model belongs only to you</h4>
+              <p>Your Style Memory is never shared with other users and never used to train public AI models. It exists solely to generate content for your account — a proprietary voice asset that grows more valuable over time.</p>
             </div>
           </div>
         </div>
@@ -2285,7 +2506,7 @@
 
       <div class="sm-visual fade-up fade-up-delay-2">
         <div class="sm-card">
-          <div class="sm-card-label">Your Style Profile · Updated after each post</div>
+          <div class="sm-card-label">Your Style Profile · Built from LinkedIn · Updated after each post</div>
 
           <div class="sm-voice-bars">
             <div class="sm-bar-row">
@@ -2351,41 +2572,41 @@
         <div class="timeline-step fade-up">
           <div class="timeline-num">1</div>
           <div class="timeline-content">
-            <div class="timeline-tag">Connect your voice</div>
-            <h3>Feed Cridl your writing history</h3>
-            <p>Paste or sync your last 5–10 LinkedIn posts. Style Memory maps your vocabulary, tone, sentence patterns, and topic affinity. This is your voice model — the foundation everything else is built on.</p>
+            <div class="timeline-tag">Connect LinkedIn</div>
+            <h3>One click. Your profile does the talking.</h3>
+            <p>Connect via LinkedIn's official OAuth. Cridl reads your headline, bio, experience, and recent posts through the official API — and automatically builds your Style Memory™ model and brand profile. No manual setup. No writing samples to paste. Understood instantly.</p>
           </div>
         </div>
         <div class="timeline-step fade-up fade-up-delay-1">
           <div class="timeline-num">2</div>
           <div class="timeline-content">
-            <div class="timeline-tag">Set your strategy</div>
-            <h3>Define your content pillars and goals</h3>
-            <p>Tell Cridl what you want to talk about, who you're talking to, and how often you want to post. This is your strategic layer — it doesn't change post-by-post, it guides every draft Cridl produces.</p>
+            <div class="timeline-tag">Review your brand profile</div>
+            <h3>See what Cridl learned — edit if needed</h3>
+            <p>Your auto-generated brand profile shows your detected niche, ICP, tone, content pillars, and voice characteristics. Everything is editable. Most users review it in under 2 minutes and don't change a thing.</p>
           </div>
         </div>
         <div class="timeline-step fade-up fade-up-delay-2">
           <div class="timeline-num">3</div>
           <div class="timeline-content">
-            <div class="timeline-tag">AI drafts your content</div>
-            <h3>Cridl generates posts calibrated to your voice</h3>
-            <p>Using your Voice Layer and Strategy Layer together, Cridl writes drafts that reflect your actual writing style — not a generic LinkedIn template. Every draft includes a matching AI-generated image.</p>
+            <div class="timeline-tag">Smart suggestions + AI drafts</div>
+            <h3>Post ideas and drafts, ready instantly</h3>
+            <p>Cridl surfaces a personalized idea queue based on your profile, industry, and expertise — then generates full drafts calibrated to your voice model. Every draft includes a matching AI-generated image. Your first post is ready within seconds of onboarding.</p>
           </div>
         </div>
         <div class="timeline-step fade-up fade-up-delay-3">
           <div class="timeline-num">4</div>
           <div class="timeline-content">
-            <div class="timeline-tag">You're in control</div>
+            <div class="timeline-tag">Full editorial control</div>
             <h3>Review, edit, and approve every post</h3>
-            <p>Every draft lands in your review queue — not your LinkedIn feed. Edit anything. Reject what doesn't work. Approve what does. Nothing publishes without your explicit sign-off. You stay the author.</p>
+            <p>Every draft lands in your review queue — not your LinkedIn feed. Edit anything. Reject what doesn't fit. Approve what does. Nothing publishes without your explicit sign-off. You stay the author, always.</p>
           </div>
         </div>
         <div class="timeline-step fade-up fade-up-delay-4">
           <div class="timeline-num">5</div>
           <div class="timeline-content">
-            <div class="timeline-tag">The system learns</div>
-            <h3>Publish, measure, and improve</h3>
-            <p>Schedule approved posts to your content calendar. Cridl tracks performance — impressions, best times, top formats — and feeds those signals back into your Style Memory. Each cycle, the system gets sharper.</p>
+            <div class="timeline-tag">The system compounds</div>
+            <h3>Publish, measure, improve — automatically</h3>
+            <p>Schedule approved posts to your content calendar. Cridl tracks impressions, best times, top formats, and engagement signals — feeding them back into your Style Memory. Each publishing cycle, the model gets more accurate. Month three is better than month one. Month twelve is uncanny.</p>
           </div>
         </div>
       </div>
@@ -2481,8 +2702,8 @@
     <div class="container">
       <div class="features-header">
         <p class="section-label fade-up">Why Cridl</p>
-        <h2 class="section-headline fade-up fade-up-delay-1">The alternatives all have<br />the same fundamental flaw.</h2>
-        <p class="section-sub fade-up fade-up-delay-2">They don't know who you are. Cridl does — and it gets more accurate every time you use it.</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">Every alternative starts from zero.<br />Cridl starts from you.</h2>
+        <p class="section-sub fade-up fade-up-delay-2">The moment you connect LinkedIn, Cridl knows your niche, voice, and expertise. No other tool does that — and none of them get better the longer you use them.</p>
       </div>
 
       <div class="comparison-grid">
@@ -2538,19 +2759,19 @@
           <div class="comp-items">
             <div class="comp-item">
               <span class="comp-item-icon">✓</span>
+              Reads your LinkedIn profile &amp; posts — understood instantly, zero setup
+            </div>
+            <div class="comp-item">
+              <span class="comp-item-icon">✓</span>
               Style Memory trained on your actual writing — improves every post
             </div>
             <div class="comp-item">
               <span class="comp-item-icon">✓</span>
-              Drafts that sound like you on your best day, not a template
+              Auto-generates brand profile, ICP, niche, and content strategy
             </div>
             <div class="comp-item">
               <span class="comp-item-icon">✓</span>
-              Full workflow: strategy → draft → review → calendar → publish
-            </div>
-            <div class="comp-item">
-              <span class="comp-item-icon">✓</span>
-              Gets more accurate the longer you use it — a compounding asset
+              Full workflow: connect → profile → drafts → review → publish → learn
             </div>
           </div>
         </div>
@@ -2759,6 +2980,14 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
+            What LinkedIn data does Cridl access, and how?
+            <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer">Cridl accesses your LinkedIn profile data and recent posts through LinkedIn's official API — using the same OAuth permission flow LinkedIn requires for all third-party integrations. When you connect, you explicitly authorize what Cridl can access. We read your headline, about section, experience, and recent posts to build your Style Memory™ model and brand profile. We only access data you authorize, we never scrape, and you can revoke access at any time directly from your LinkedIn settings.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
             How does the LinkedIn connection work?
             <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
           </button>
@@ -2806,8 +3035,8 @@
     <div class="container">
       <div class="features-header">
         <p class="section-label fade-up">Built responsibly</p>
-        <h2 class="section-headline fade-up fade-up-delay-1">Enterprise-ready.<br />LinkedIn-compliant.</h2>
-        <p class="section-sub fade-up fade-up-delay-2">Cridl is built to work with LinkedIn's policies — not around them. Every technical and editorial decision reflects that.</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">Built on LinkedIn's official API.<br />Compliant by design.</h2>
+        <p class="section-sub fade-up fade-up-delay-2">Profile data, post history, and publishing all happen through LinkedIn's official API — with your explicit permission, in full compliance with LinkedIn's platform policies.</p>
       </div>
 
       <div class="trust-grid">
@@ -2818,8 +3047,8 @@
         </div>
         <div class="trust-card fade-up fade-up-delay-1">
           <div class="trust-icon">🔐</div>
-          <h3>Official LinkedIn OAuth integration</h3>
-          <p>Cridl connects to LinkedIn through the official OAuth flow — the same secure standard LinkedIn uses for all third-party apps. No password storage. No scraping. No unauthorized data access.</p>
+          <h3>Official LinkedIn API — all data access is authorized</h3>
+          <p>Profile data, post history, and publishing all flow through LinkedIn's official API with your explicit OAuth permission. No password storage. No scraping. No access beyond what you authorize. Revoke access any time from your LinkedIn settings.</p>
         </div>
         <div class="trust-card fade-up fade-up-delay-2">
           <div class="trust-icon">🛡️</div>
