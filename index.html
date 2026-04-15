@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cridl — The Personal Brand Operating System</title>
-  <meta name="description" content="Cridl is the AI system that learns your writing style, builds your content strategy, and keeps you consistently visible on LinkedIn. Gets smarter with every post you publish." />
+  <meta name="description" content="Cridl is the personal brand operating system that gets better every week. Connects to LinkedIn, builds your voice model automatically, and compounds with every post you publish." />
   <meta property="og:title" content="Cridl — The Personal Brand Operating System" />
   <meta property="og:description" content="Stop creating content. Start operating your brand. Cridl learns your voice, plans your strategy, and generates LinkedIn content that sounds unmistakably like you." />
   <meta property="og:type" content="website" />
@@ -2134,6 +2134,156 @@
       color: var(--accent);
       margin-bottom: 8px;
     }
+
+    /* ── COMPOUNDING SYSTEM ── */
+    #compound { background: var(--bg); }
+    #compound .features-header { margin-bottom: 56px; }
+
+    .compound-loop {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      max-width: 900px;
+      margin: 0 auto 64px;
+      position: relative;
+    }
+
+    .compound-loop::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: calc(12.5% + 20px);
+      right: calc(12.5% + 20px);
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent) 0%, rgba(45,91,255,0.15) 100%);
+    }
+
+    .loop-step {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .loop-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .loop-icon-1 { background: rgba(45,91,255,0.1); }
+    .loop-icon-2 { background: rgba(34,197,94,0.1); }
+    .loop-icon-3 { background: rgba(139,92,246,0.1); }
+    .loop-icon-4 { background: rgba(249,115,22,0.1); }
+
+    .loop-step h4 { font-size: 0.875rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .loop-step p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+
+    .compound-snapshots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      max-width: 860px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .cs-snap {
+      padding: 28px;
+      border-right: 1px solid var(--border);
+    }
+
+    .cs-snap:last-child { border-right: none; }
+
+    .cs-snap-highlight { background: var(--text); }
+
+    .cs-time {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .cs-snap-highlight .cs-time { color: rgba(255,255,255,0.4); }
+
+    .cs-snap h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .cs-snap-highlight h3 { color: #fff; }
+
+    .cs-snap p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
+    .cs-snap-highlight p { color: rgba(255,255,255,0.55); }
+
+    .cs-snap-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 14px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #22c55e;
+    }
+
+    /* ── WITHOUT CRIDL CALLOUT ── */
+    .without-callout {
+      max-width: 860px;
+      margin: 56px auto 0;
+      background: #fff3f0;
+      border: 1px solid #fecaca;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .without-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .without-callout h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #991b1b;
+      margin-bottom: 8px;
+    }
+
+    .without-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .without-item {
+      font-size: 0.82rem;
+      color: #7f1d1d;
+      background: rgba(220,38,38,0.07);
+      border: 1px solid rgba(220,38,38,0.15);
+      border-radius: 8px;
+      padding: 5px 12px;
+    }
+
+    @media (max-width: 768px) {
+      .compound-loop { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .compound-loop::before { display: none; }
+      .compound-snapshots { grid-template-columns: 1fr; }
+      .cs-snap { border-right: none; border-bottom: 1px solid var(--border); }
+      .cs-snap-highlight { border-bottom: none; }
+      .without-callout { grid-template-columns: 1fr; gap: 12px; }
+    }
   </style>
 </head>
 <body>
@@ -2143,7 +2293,7 @@
     <a href="#" class="nav-logo">crid<span>l</span></a>
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
-      <li><a href="#how">How it works</a></li>
+      <li><a href="#compound">Why it compounds</a></li>
       <li><a href="#compliance">Trust &amp; Compliance</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
@@ -2156,7 +2306,7 @@
   <section id="hero">
     <div class="badge fade-up">✦ Personal Brand Operating System</div>
     <h1 class="hero-headline fade-up fade-up-delay-1">Stop creating content.<br /><em>Start operating your brand.</em></h1>
-    <p class="hero-sub fade-up fade-up-delay-2">Connect your LinkedIn once. Cridl reads your profile, experience, and past posts — then builds your complete brand voice model automatically. No manual setup. First draft ready in seconds.</p>
+    <p class="hero-sub fade-up fade-up-delay-2">Connect LinkedIn once. Cridl builds a voice model from your profile and posts — then gets sharper with every draft you approve. Week one it sounds like you. Month twelve, it IS you. Nothing else compounds like this.</p>
     <div class="hero-ctas fade-up fade-up-delay-3">
       <a href="#cta" class="btn btn-primary btn-lg">Get Early Access</a>
       <a href="#how" class="btn btn-outline btn-lg">See how it works</a>
@@ -2293,25 +2443,25 @@
   <section id="problem">
     <div class="container">
       <p class="section-label fade-up">The real problem</p>
-      <h2 class="section-headline fade-up fade-up-delay-1">Your LinkedIn presence isn't<br />a content problem. It's a systems problem.</h2>
-      <p class="section-sub fade-up fade-up-delay-2">Most professionals have things worth saying. What they don't have is a repeatable process to say them — consistently, authentically, at scale.</p>
+      <h2 class="section-headline fade-up fade-up-delay-1">Inconsistency isn't a motivation problem.<br />It's what happens without a system.</h2>
+      <p class="section-sub fade-up fade-up-delay-2">Every week you don't show up on LinkedIn is a week your competitors do. Without a system, you start from zero every time — and starting from zero means you never compound.</p>
 
       <div class="pain-grid" style="margin-top: 56px;">
         <div class="pain-card fade-up">
           <div class="pain-icon">🪞</div>
-          <p>Generic AI doesn't know you. ChatGPT produces competent text — but 'competent' isn't the same as 'yours.' Every post sounds like the same professional who sounds like every other professional.</p>
+          <p>Generic AI makes you invisible. ChatGPT produces polished content. So does every other professional using ChatGPT. The result is a feed of indistinguishable "thought leadership" — and a shrinking chance of standing out.</p>
         </div>
         <div class="pain-card fade-up fade-up-delay-1">
           <div class="pain-icon">🔁</div>
-          <p>Consistency is a structural problem. Posting sporadically isn't a motivation issue — it's a workflow issue. Without a system, you start from zero every time. That's exhausting, and it never compounds.</p>
+          <p>Every session starts from zero. No system means no memory. The hours you put into last month's posts teach you nothing that helps today. Without compounding, effort doesn't accumulate — it just disappears.</p>
         </div>
         <div class="pain-card fade-up fade-up-delay-2">
           <div class="pain-icon">📉</div>
-          <p>Your expertise deserves better distribution. You've built real knowledge over years. The tools available to share it are too slow, too generic, or too expensive. That gap costs you visibility every week.</p>
+          <p>Sporadic posting actively suppresses you. LinkedIn's algorithm doesn't reward effort — it rewards cadence. Post once in January, skip February, and the reach you built is gone. Inconsistency doesn't just stall growth. It reverses it.</p>
         </div>
       </div>
 
-      <p class="problem-transition fade-up">Cridl is the system that <em>closes the gap.</em></p>
+      <p class="problem-transition fade-up">A system running every week <em>changes the trajectory entirely.</em></p>
     </div>
   </section>
 
@@ -2319,21 +2469,21 @@
   <section id="before-after">
     <div class="ba-inner">
       <p class="section-label fade-up">The transformation</p>
-      <h2 class="section-headline fade-up fade-up-delay-1">What changes when you use Cridl</h2>
+      <h2 class="section-headline fade-up fade-up-delay-1">What changes when you run the system</h2>
 
       <div class="ba-grid">
         <div class="ba-col fade-up">
           <div class="ba-col-label before">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-            Before Cridl
+            Without a system
           </div>
           <div class="ba-items">
-            <div class="ba-item bad">Posting once a month, inconsistently</div>
-            <div class="ba-item bad">Generic AI content that doesn't sound like you</div>
-            <div class="ba-item bad">1–2 hours writing a single post</div>
-            <div class="ba-item bad">No content strategy, just reactive posting</div>
-            <div class="ba-item bad">Starting from a blank screen every time</div>
-            <div class="ba-item bad">No idea what's actually performing</div>
+            <div class="ba-item bad">Sporadic posts — algorithm suppresses your reach</div>
+            <div class="ba-item bad">Generic AI that could have been written by anyone</div>
+            <div class="ba-item bad">Hours per post. Zero momentum between sessions.</div>
+            <div class="ba-item bad">No strategy. Reacting to ideas instead of building toward anything.</div>
+            <div class="ba-item bad">Nothing you wrote last month helps you today</div>
+            <div class="ba-item bad">Publishing into the void. No feedback loop.</div>
           </div>
         </div>
 
@@ -2344,15 +2494,15 @@
         <div class="ba-col fade-up fade-up-delay-2">
           <div class="ba-col-label after">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            After Cridl
+            With Cridl — compounding weekly
           </div>
           <div class="ba-items">
-            <div class="ba-item good">Posting 3–5× per week, consistently</div>
-            <div class="ba-item good">Every draft sounds exactly like you</div>
-            <div class="ba-item good">Months of content planned in one session</div>
-            <div class="ba-item good">Structured content strategy, not guesswork</div>
-            <div class="ba-item good">AI drafts ready for your review, instantly</div>
-            <div class="ba-item good">Analytics showing what drives results</div>
+            <div class="ba-item good">3–5× per week, every week. Cadence the algorithm rewards.</div>
+            <div class="ba-item good">Every draft sounds like you — and gets more accurate every month</div>
+            <div class="ba-item good">3 months of content planned and approved in one session</div>
+            <div class="ba-item good">Content strategy built from your expertise. Compounds over time.</div>
+            <div class="ba-item good">Drafts arrive sharper at month 3 than day 1 — and sharper still at month 12</div>
+            <div class="ba-item good">Analytics feeding back into the system. Each cycle improves the next.</div>
           </div>
         </div>
       </div>
@@ -2408,8 +2558,8 @@
     <div class="container">
       <div class="features-header">
         <p class="section-label fade-up">The system</p>
-        <h2 class="section-headline fade-up fade-up-delay-1">Your personal brand,<br />finally systemized.</h2>
-        <p class="section-sub fade-up fade-up-delay-2">Cridl isn't a feature — it's four interconnected layers that work together as a complete operating system for your professional presence.</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">Four layers. One system.<br />Style Memory at the center of all of it.</h2>
+        <p class="section-sub fade-up fade-up-delay-2">Cridl isn't a feature collection — it's four interconnected layers built around Style Memory™ as the core engine. Everything gets better as Style Memory compounds.</p>
       </div>
 
       <div class="system-grid fade-up fade-up-delay-2">
@@ -2430,8 +2580,8 @@
         </div>
         <div class="system-cell">
           <div class="system-cell-num">04</div>
-          <h3>Distribution Layer — Review &amp; Publish</h3>
-          <p>Every draft lands in your review queue. You edit, approve, and schedule to your content calendar. Analytics feed back into the system — each publishing cycle makes the next one sharper.</p>
+          <h3>Distribution Layer — Publish &amp; Compound</h3>
+          <p>Every draft lands in your review queue. You edit, approve, and schedule. Analytics feed directly back into your Style Memory — post performance, best formats, timing patterns. Each publishing cycle makes the next one sharper. The system doesn't plateau. It accumulates.</p>
         </div>
       </div>
     </div>
@@ -2551,8 +2701,8 @@
         <div class="sm-compound-badge fade-up fade-up-delay-3">
           <div style="font-size:1.1rem;flex-shrink:0;">↗</div>
           <div>
-            <strong>Compounding accuracy</strong>
-            Voice match improves with every post you publish. Users who've been on Cridl for 90+ days report drafts that need almost no editing.
+            <strong>This model is not transferable</strong>
+            Built from your actual posts. Refined by every draft you approve. After 90 days, this voice model is a proprietary asset — not something you replicate elsewhere overnight.
           </div>
         </div>
       </div>
@@ -2605,8 +2755,8 @@
           <div class="timeline-num">5</div>
           <div class="timeline-content">
             <div class="timeline-tag">The system compounds</div>
-            <h3>Publish, measure, improve — automatically</h3>
-            <p>Schedule approved posts to your content calendar. Cridl tracks impressions, best times, top formats, and engagement signals — feeding them back into your Style Memory. Each publishing cycle, the model gets more accurate. Month three is better than month one. Month twelve is uncanny.</p>
+            <h3>Publish, measure, improve — the loop never stops</h3>
+            <p>Schedule approved posts to your content calendar. Cridl tracks impressions, best times, top formats, and engagement signals — feeding everything back into your Style Memory. Each cycle, the model gets more accurate. Month three is better than month one. Month twelve, the drafts need almost no editing. The system doesn't plateau. It deepens.</p>
           </div>
         </div>
       </div>
@@ -2786,29 +2936,29 @@
         <!-- Left: copy -->
         <div>
           <p class="section-label fade-up">What the system delivers</p>
-          <h2 class="section-headline fade-up fade-up-delay-1">A brand that compounds.<br />Results that are measurable.</h2>
-          <p class="section-sub fade-up fade-up-delay-2">Cridl users don't just post more — they build a presence that accumulates. Consistent voice. Consistent cadence. Consistent growth.</p>
+          <h2 class="section-headline fade-up fade-up-delay-1">The numbers don't plateau.<br />They compound.</h2>
+          <p class="section-sub fade-up fade-up-delay-2">Cridl users don't just post more consistently — they build a presence that accumulates. Consistent voice. Consistent cadence. Compounding growth.</p>
 
           <div class="results-stats">
             <div class="stat-pill fade-up fade-up-delay-1">
               <div class="stat-pill-icon">📈</div>
               <div class="stat-pill-text">
                 <strong>6.2× average impression growth</strong>
-                <span>within 60 days of running the system consistently</span>
+                <span>within 60 days of consistent system use — not one-off viral posts</span>
               </div>
             </div>
             <div class="stat-pill fade-up fade-up-delay-2">
               <div class="stat-pill-icon">🎯</div>
               <div class="stat-pill-text">
-                <strong>Style accuracy improves every month</strong>
-                <span>users at 90+ days report drafts that need almost no editing</span>
+                <strong>Drafts get more accurate every month</strong>
+                <span>users at 90+ days report near-zero editing — the model knows their voice cold</span>
               </div>
             </div>
             <div class="stat-pill fade-up fade-up-delay-3">
               <div class="stat-pill-icon">⏱️</div>
               <div class="stat-pill-text">
-                <strong>6+ hours saved every week</strong>
-                <span>vs. writing, sourcing images, and scheduling manually</span>
+                <strong>6+ hours reclaimed every week</strong>
+                <span>time that compounds into more posts, not just less writing effort</span>
               </div>
             </div>
           </div>
@@ -2880,17 +3030,96 @@
     </div>
   </section>
 
+  <!-- COMPOUNDING SYSTEM -->
+  <section id="compound">
+    <div class="container">
+      <div class="features-header">
+        <p class="section-label fade-up">Why it compounds</p>
+        <h2 class="section-headline fade-up fade-up-delay-1">It doesn't just work.<br />It improves.</h2>
+        <p class="section-sub fade-up fade-up-delay-2">Most tools work the same on day 300 as day 3. Cridl runs a continuous learning loop — every post you publish makes the next draft sharper, and the one after that sharper still.</p>
+      </div>
+
+      <div class="compound-loop">
+        <div class="loop-step fade-up">
+          <div class="loop-icon loop-icon-1">🔗</div>
+          <h4>You connect LinkedIn</h4>
+          <p>Voice model built instantly from your profile and posts. Zero setup. Zero questionnaires.</p>
+        </div>
+        <div class="loop-step fade-up fade-up-delay-1">
+          <div class="loop-icon loop-icon-2">✍️</div>
+          <h4>You approve drafts</h4>
+          <p>Every edit and approval signals what sounds right — and what doesn't. The system is always listening.</p>
+        </div>
+        <div class="loop-step fade-up fade-up-delay-2">
+          <div class="loop-icon loop-icon-3">🧠</div>
+          <h4>Style Memory updates</h4>
+          <p>Patterns accumulate. Your voice model grows more precise with each publishing cycle.</p>
+        </div>
+        <div class="loop-step fade-up fade-up-delay-3">
+          <div class="loop-icon loop-icon-4">📈</div>
+          <h4>Drafts get more accurate</h4>
+          <p>The next batch needs less editing. Then less still. The loop repeats — indefinitely.</p>
+        </div>
+      </div>
+
+      <div class="compound-snapshots fade-up">
+        <div class="cs-snap">
+          <div class="cs-time">Week 1</div>
+          <h3>Good from day one</h3>
+          <p>Your first draft sounds like you — because Cridl read your actual posts, not a questionnaire. Minor edits. Ready to publish in minutes.</p>
+          <div class="cs-snap-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Voice model active from day one
+          </div>
+        </div>
+        <div class="cs-snap">
+          <div class="cs-time">Month 3</div>
+          <h3>Noticeably sharper</h3>
+          <p>Your Style Memory has processed 30+ posts. Drafts arrive closer to final. Edits take seconds, not minutes. Content planning feels effortless.</p>
+          <div class="cs-snap-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            30+ posts learned · Accuracy compounding
+          </div>
+        </div>
+        <div class="cs-snap cs-snap-highlight">
+          <div class="cs-time">Month 12</div>
+          <h3>Almost no editing needed</h3>
+          <p>Users who've run the system for 12 months report drafts that go live almost unchanged. The model knows your voice better than you can describe it on a blank page.</p>
+          <div class="cs-snap-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            100+ posts learned · Near-zero editing
+          </div>
+        </div>
+      </div>
+
+      <div class="without-callout fade-up" style="margin-top:48px;">
+        <div class="without-icon">⚠️</div>
+        <div>
+          <h4>What happens when you don't run the system</h4>
+          <p style="font-size:0.875rem;color:#7f1d1d;line-height:1.65;margin-bottom:12px;">Every week without a system is a week your voice model isn't learning. Your competitors who started earlier already have months of compounding you can't instantly replicate.</p>
+          <div class="without-items">
+            <span class="without-item">Generic AI = invisible posts</span>
+            <span class="without-item">Sporadic cadence = suppressed reach</span>
+            <span class="without-item">No feedback loop = flat growth</span>
+            <span class="without-item">No memory = start from zero every time</span>
+            <span class="without-item">No strategy = reactive, not compounding</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- VOICE / PHILOSOPHY -->
   <section id="voice">
     <div class="voice-inner">
-      <h2 class="section-headline fade-up">The longer you use Cridl,<br />the more valuable it becomes.</h2>
+      <h2 class="section-headline fade-up">Your account accumulates.<br />Every other tool resets.</h2>
       <div class="voice-body">
-        <p class="fade-up fade-up-delay-1">Most SaaS tools are the same on day one as day three hundred. Cridl is different.</p>
-        <p class="fade-up fade-up-delay-1">Every post you publish, every edit you make, every piece of feedback you give — all of it makes your Style Memory more accurate. Month three sounds more like you than month one. Month twelve is uncanny.</p>
-        <p class="voice-bold fade-up fade-up-delay-2">Your Cridl account becomes a proprietary asset that compounds over time.</p>
-        <p class="fade-up fade-up-delay-2">Your voice model. Your content history. Your best-performing formats and topics. Your audience's engagement patterns. All of it stored, analyzed, and used to make the next post better than the last.</p>
-        <p class="fade-up fade-up-delay-3">Switching away means starting from zero. Staying means getting better every week.</p>
-        <p class="voice-bold fade-up fade-up-delay-4">That's the moat. Not just a product — a personal brand infrastructure that grows with you.</p>
+        <p class="fade-up fade-up-delay-1">There is no version of "starting over" that doesn't cost you. Not just the setup time — the months of learning your system has already done.</p>
+        <p class="fade-up fade-up-delay-1">Your Style Memory. Your content calendar. Your post history. Your audience's engagement patterns. The best-performing formats, topics, and post lengths for your specific niche. Six months of that data isn't something you rebuild in an afternoon on a competing tool.</p>
+        <p class="voice-bold fade-up fade-up-delay-2">After 90 days of consistent use, your Cridl account is a proprietary asset. Not replicable. Not replaceable quickly.</p>
+        <p class="fade-up fade-up-delay-2">Every time you approve a draft, edit a sentence, or reject something that doesn't sound right — the system notes it. Patterns that appear once are logged. Patterns that appear consistently become part of your permanent voice signature. The model doesn't forget.</p>
+        <p class="fade-up fade-up-delay-3">Switching away means starting from zero. Staying means the next post is better than the last.</p>
+        <p class="voice-bold fade-up fade-up-delay-4">That's not lock-in. That's compounding. And every week you don't start is a week the system isn't learning.</p>
       </div>
       <a href="#cta" class="btn btn-primary btn-lg btn-pill fade-up fade-up-delay-4">Start building yours →</a>
     </div>
@@ -2901,7 +3130,7 @@
     <div class="container">
       <div class="features-header">
         <p class="section-label fade-up">Early users</p>
-        <h2 class="section-headline fade-up fade-up-delay-1">What it feels like when the system works.</h2>
+        <h2 class="section-headline fade-up fade-up-delay-1">What it feels like when the system compounds.</h2>
       </div>
       <div class="testimonial-grid">
 
@@ -3163,8 +3392,8 @@
   <section id="cta">
     <div class="container">
       <p class="section-label fade-up">Early access</p>
-      <h2 class="section-headline fade-up fade-up-delay-1">Build the brand you've been putting off.</h2>
-      <p class="section-sub fade-up fade-up-delay-2">Join professionals and teams who've stopped improvising and started operating. Early access — spots are limited.</p>
+      <h2 class="section-headline fade-up fade-up-delay-1">Start the system. The longer you wait,<br />the later it starts learning.</h2>
+      <p class="section-sub fade-up fade-up-delay-2">Early users already have months of compounding. Every week you don't run Cridl is a week your voice model isn't improving — and a week your brand isn't working for you.</p>
 
       <form class="email-form fade-up fade-up-delay-3" id="waitlist-form" onsubmit="handleSubmit(event)">
         <input
